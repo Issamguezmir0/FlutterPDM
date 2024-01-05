@@ -90,8 +90,8 @@ class _EventsTabViewState extends State<EventsTabView> {
               children: [
                 _makeTitleTableRowWidget(text: "Image"),
                 _makeTitleTableRowWidget(text: "Title"),
-                _makeTitleTableRowWidget(text: "Organisateur"),
-                _makeTitleTableRowWidget(text: "Description"),
+                _makeTitleTableRowWidget(text: "Orgeniser"),
+                _makeTitleTableRowWidget(text: "Details"),
                 _makeTitleTableRowWidget(text: "date"),
                 _makeTitleTableRowWidget(text: "is Free"),
                 _makeTitleTableRowWidget(text: "price"),
@@ -126,7 +126,7 @@ class _EventsTabViewState extends State<EventsTabView> {
       children: [
         _makeImageTableRowWidget(text: event.image),
         _makeTableRowWidget(text: event.title),
-        _makeTableRowWidget(text: event.organisateur),
+        _makeTableRowWidget(text: event.location),
         _makeTableRowWidget(text: event.description),
         _makeTableRowWidget(text: event.date),
         _makeIsFreeTableRowWidget(text: event.isFree.toString()),
@@ -152,35 +152,6 @@ class _EventsTabViewState extends State<EventsTabView> {
                     ),
                   ),
                   icon: const Icon(Icons.remove_red_eye, color: noticeColor),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(3),
-                child: IconButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(
-                      warningColor.withOpacity(0.3),
-                    ),
-                  ),
-                  icon: const Icon(Icons.edit, color: warningColor),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(3),
-                child: IconButton(
-                  onPressed: () {
-                    /*
-                    event.isBanned = !event.isBanned;
-                    eventViewModel.update(event: event).then(
-                          (value) => loadData(),
-                        );
-                */
-                  },
-                  icon: Icon(
-                    Icons.block,
-                    color: dangerColor,
-                  ),
                 ),
               ),
             ],

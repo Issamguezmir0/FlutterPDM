@@ -71,37 +71,13 @@ class EventDetails extends StatelessWidget {
               Row(
                 children: [
                   const Text(
-                    "is free:",
+                    "Orgeniser:",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     width: 15,
                   ),
-                  Text(event.isFree ?? "no - is free"),
-                ],
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "location:",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Text(event.location ?? "no - location"),
-                ],
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "price:",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Text(event.price ?? "no - price"),
+                  Text(event.location ?? "no - orgeniser"),
                 ],
               ),
             ]),
