@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -24,13 +26,14 @@ class ApiImageLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log("$imagesUrl$imageFilename");
     return imageFilename != null
         ? CachedNetworkImage(
             key: Key(imageFilename.toString()),
             height: height,
             width: width,
             cacheKey: imageFilename.toString(),
-            imageUrl: "$imagesUrl/$imageFilename",
+            imageUrl: "$imagesUrl$imageFilename",
             httpHeaders: {
               "Authorization": "Bearer ${(TokenManager.storedToken)}"
             },

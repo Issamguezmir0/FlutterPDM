@@ -2,6 +2,7 @@ import 'package:pdm/utils/dimensions.dart';
 import 'package:pdm/utils/theme/theme_styles.dart';
 import 'package:pdm/utils/user_session.dart';
 import 'package:pdm/view/splash_screen.dart';
+import 'package:pdm/view/tabs/events_tab_view.dart';
 import 'package:pdm/view/tabs/other_tab_view.dart';
 import 'package:pdm/view/tabs/profile_tab_view.dart';
 import 'package:pdm/view/tabs/users_tab_view.dart';
@@ -27,6 +28,7 @@ class _MainViewState extends State<MainView> with TickerProviderStateMixin {
   List<String> tabTitles = [
     "Profile",
     "Users",
+    'Events',
     "Other tab 1",
     "Other tab 2",
   ];
@@ -34,6 +36,7 @@ class _MainViewState extends State<MainView> with TickerProviderStateMixin {
   List<IconData> tabIcons = [
     Icons.person_outline,
     Icons.people_outline,
+    Icons.event_available_rounded,
     Icons.more_horiz,
     Icons.more_horiz,
   ];
@@ -41,6 +44,7 @@ class _MainViewState extends State<MainView> with TickerProviderStateMixin {
   List<IconData> tabIconsSelected = [
     Icons.person,
     Icons.people,
+    Icons.event_available_rounded,
     Icons.more_horiz,
     Icons.more_horiz,
   ];
@@ -108,6 +112,7 @@ class _MainViewState extends State<MainView> with TickerProviderStateMixin {
         children: const [
           ProfileTabView(),
           UsersTabView(),
+          EventsTabView(),
           OtherTabView(),
           OtherTabView(),
         ],
